@@ -4,7 +4,7 @@ import os, subprocess, shutil
 def restart_service(service_name):
     try:
         subprocess.run(['sudo', 'systemctl', 'restart', service_name], check=True)
-        print(f"Service'{service_name}' restarted successfully")
+        print(f"Service '{service_name}' restarted successfully")
     except subprocess.CalledProcessError as e:
         print(f"Error restarting service '{service_name}': {e}")
 
